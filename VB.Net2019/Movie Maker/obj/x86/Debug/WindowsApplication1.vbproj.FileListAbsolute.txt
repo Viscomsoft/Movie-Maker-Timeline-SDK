@@ -1,0 +1,15 @@
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\bin\Debug\WindowsApplication1.exe
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\bin\Debug\WindowsApplication1.pdb
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\bin\Debug\WindowsApplication1.xml
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\bin\Debug\Interop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\bin\Debug\AxInterop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.vbprojAssemblyReference.cache
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\Interop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\AxInterop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.vbproj.ResolveComReference.cache
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.cache
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.exe
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.xml
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\VB.Net2010\Movie Maker\obj\x86\Debug\WindowsApplication1.pdb
