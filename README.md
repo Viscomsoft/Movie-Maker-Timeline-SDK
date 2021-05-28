@@ -16,6 +16,6 @@ Support Zoom in , Zoom out the preview video window.
 
 Compatible with any programming language that supports COM (Visual C , Visual Basic , Delphi, .Net, etc.)
 
-Include C# 2019, C# 2015, VB.NET 2019, VB.NET 2015, C# 2010, VB.NET 2010, ASP.net, Access, VB script, VB6 , VC , Delphi and VFP Sample Code.
+Include C# 2019, C# 2010, VB.NET 2019, VB.NET 2010, VB6 , VC++, Delphi Sample Code.
 
 Royalty free distribution of the SDK file.
