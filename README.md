@@ -1,11 +1,11 @@
 # Movie-Maker-Timeline-SDK
-Introduction
+# Introduction
 Video Editor SDK that allows users Drag & Drop to arrange clip orders, edit movies, apply effects & transitions with C++ , C#, VB.net , VB, Delphi, VFP, MS Access. 
 
-Download
+# Download
 Install Viscomsoft Movie Maker Timeline SDK ActiveX from http://www.viscomsoft.com/products/movie-maker-timeline
 
-Highlights
+# Highlights
 Combine multiple image, audio and video files, effects, text and transitions using a 8 track timeline.
 
 Make movies in AVI, WMV, MPEG1, MPEG2, VCD, SVCD, DVD, MP4, AVCHD, FLV format. 
