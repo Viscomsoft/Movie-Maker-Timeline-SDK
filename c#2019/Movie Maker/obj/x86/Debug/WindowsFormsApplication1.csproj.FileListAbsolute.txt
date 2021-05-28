@@ -1,0 +1,13 @@
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\bin\Debug\WindowsFormsApplication1.exe
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\bin\Debug\WindowsFormsApplication1.pdb
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\bin\Debug\Interop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\bin\Debug\AxInterop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\Interop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\AxInterop.TimelineAxLib.dll
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Program Files (x86)\Movie Maker Timeline ControlXXXFianXXX7.0\Examples\c#2010\Movie Maker\obj\x86\Debug\WindowsFormsApplication1.pdb
