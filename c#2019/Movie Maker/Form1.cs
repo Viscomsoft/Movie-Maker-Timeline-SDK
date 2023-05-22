@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
         private void Button6_Click(object sender, EventArgs e)
         {
 
-            openFileDialog1.Filter = "All Files (*.*)|*.*|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t||";
+            openFileDialog1.Filter = "All Files (*.*)|*.*|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t;...";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 float iduration;
@@ -54,6 +54,11 @@ namespace WindowsFormsApplication1
 
                 axTimelineControl1.GetMediaInfo(txtvideo1.Text, out iduration, out iwidth, out iheight, out iframerate, out ivideobitrate, out iaudiobitrate, out iaudiosamplerate, out iaudiochannel, out ivideostreamcount, out iaudiostreamcouunt, out strmediacontainer, out strvideostreamformat, out straudiostreamformat);
 
+                if (iwidth > 1980)
+                {
+                    MessageBox.Show("Your input video resolution too high,if you add a number of these video into timeline, it will not work, because memory limitation. You should convert this video into 1920x1080 or 1280x720 MP4 file, then reimport to timline");
+               
+                }
                  double iDur = Math.Round(iduration, 2);
                  txtvideo1mediastart.Text = "0";
 
@@ -133,12 +138,24 @@ namespace WindowsFormsApplication1
             }
             _IsChanged = true;
 
-            UpdateTimelineDuration();
+
+            txtOutputImageWidth.Text = txtvideotrackwidth.Text;
+            txtOutputImageHeight.Text = txtvideotrackheight.Text;
+            
+            textboxPicinPicWidth.Text = txtvideotrackwidth.Text;
+            textboxPicinPicHeight.Text = txtvideotrackheight.Text;
+            UpdateTimelineDuration(); 
            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            hScrollBarScaleTimeline.Maximum = 18;
+            hScrollBarScaleTimeline.Minimum = 1;
+            hScrollBarScaleTimeline.LargeChange = 1;
+            hScrollBarScaleTimeline.SmallChange = 1;
+
+            hScrollBarScaleTimeline.Value = 9;
 
             radioDragOverToRight.Checked = true;
 
@@ -513,7 +530,7 @@ namespace WindowsFormsApplication1
         private void btnselectaudio1_Click(object sender, EventArgs e)
         {
 
-            openFileDialog1.Filter = "All Files (*.*)|*.*|wav (*.wav)|*.wav|MP3 (*.mp3)|*.mp3|WMA (*.wma)|*.wma|M4a (*.m4a)|*.m4a|Ogg (*.ogg)|*.ogg|AC3 (*.ac3)|*.ac3|Flac (*.flac)|*.flac|MP2 (*.mp2)|*.mp2|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t||";
+            openFileDialog1.Filter = "All Files (*.*)|*.*|wav (*.wav)|*.wav|MP3 (*.mp3)|*.mp3|WMA (*.wma)|*.wma|M4a (*.m4a)|*.m4a|Ogg (*.ogg)|*.ogg|AC3 (*.ac3)|*.ac3|Flac (*.flac)|*.flac|MP2 (*.mp2)|*.mp2|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t;...";
       
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -634,7 +651,7 @@ namespace WindowsFormsApplication1
 
         private void btnselectvideo2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "All Files (*.*)|*.*|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t||";
+            openFileDialog1.Filter = "All Files (*.*)|*.*|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t;...";
       
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -655,7 +672,12 @@ namespace WindowsFormsApplication1
                 txtvideo2.Text = openFileDialog1.FileName;
 
                 axTimelineControl1.GetMediaInfo(txtvideo2.Text, out iduration, out iwidth, out iheight, out iframerate, out ivideobitrate, out iaudiobitrate, out iaudiosamplerate, out iaudiochannel, out ivideostreamcount, out iaudiostreamcouunt, out strmediacontainer, out strvideostreamformat, out straudiostreamformat);
+                
+                if (iwidth > 1980)
+                {
+                    MessageBox.Show("Your input video resolution too high,if you add a number of these video into timeline, it will not work, because memory limitation. You should convert this video into 1920x1080 or 1280x720 MP4 file, then reimport to timline");
 
+                }
                 double iDur = Math.Round(iduration, 2);
                 
                 txtvideo2mediastart.Text = "0";
@@ -753,7 +775,7 @@ namespace WindowsFormsApplication1
         private void btnselectaudio2_Click(object sender, EventArgs e)
         {
 
-            openFileDialog1.Filter = "All Files (*.*)|*.*|wav (*.wav)|*.wav|MP3 (*.mp3)|*.mp3|WMA (*.wma)|*.wma|M4a (*.m4a)|*.m4a|Ogg (*.ogg)|*.ogg|AC3 (*.ac3)|*.ac3|Flac (*.flac)|*.flac|MP2 (*.mp2)|*.mp2|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t||";
+            openFileDialog1.Filter = "All Files (*.*)|*.*|wav (*.wav)|*.wav|MP3 (*.mp3)|*.mp3|WMA (*.wma)|*.wma|M4a (*.m4a)|*.m4a|Ogg (*.ogg)|*.ogg|AC3 (*.ac3)|*.ac3|Flac (*.flac)|*.flac|MP2 (*.mp2)|*.mp2|mpg (*.mpg*.vob) | *.mpg;*.vob|avi (*.avi) | *.avi|Divx (*.divx) | *.divx|wmv (*.wmv)| *.wmv|QuickTime (*.mov)| *.mov|MP4 (*.mp4) | *.mp4|WebM (*.webm) | *.webm|FLV (*.flv) | *.flv|MKV (*.mkv) | *.mkv|AVCHD (*.m2ts*.ts*.mts*m2t)|*.m2ts;*.ts;*.mts;*.m2t;...";
       
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -867,7 +889,13 @@ namespace WindowsFormsApplication1
 
         private void btnselectimage_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|BMP Files (*.bmp)|*.bmp||";
+            if (chkuseaddimageclip2.Checked)
+                openFileDialog1.Filter = "PNG Files (*.png)|*.png|JPEG Files (*.jpg)|*.jpg|BMP Files (*.bmp)|*.bmp|GIF Files (*.gif)|*.gif|TIFF Files (*.tif)|*.tif;...";
+            else if (chkuseaddimagecliptran.Checked)
+                openFileDialog1.Filter = "PNG Files (*.png)|*.png|JPEG Files (*.jpg)|*.jpg|BMP Files (*.bmp)|*.bmp|GIF Files (*.gif)|*.gif|TIFF Files (*.tif)|*.tif;...";
+            else
+                openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|BMP Files (*.bmp)|*.bmp;...";
+
 
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
                 txtimage.Text = openFileDialog1.FileName;
@@ -923,11 +951,7 @@ namespace WindowsFormsApplication1
 
         private void btnaddtext_Click(object sender, EventArgs e)
         {
-            txttextclipindex.Text = axTimelineControl1.AddTextClip(int.Parse(txttexttrackindex.Text), txtText.Text, float.Parse(txttextclipstart.Text), float.Parse(txttextclipstop.Text), (int)fontDialog1.Font.ToHfont(), int.Parse(txtTextX.Text), int.Parse(txtTextY.Text), Color2Uint32(colorDialog1.Color)).ToString();
-             _IsChanged = true;
-
-             UpdateTimelineDuration();
-
+           
              axTimelineControl1.SetTextClipQuality(720, 480);
 
             // video track resolution will affect the text clip quality
@@ -938,7 +962,11 @@ namespace WindowsFormsApplication1
                 axTimelineControl1.SetVideoTrackResolution(int.Parse(txtvideotrackwidth.Text), int.Parse(txtvideotrackheight.Text));
             }
 
-       
+            txttextclipindex.Text = axTimelineControl1.AddTextClip(int.Parse(txttexttrackindex.Text), txtText.Text, float.Parse(txttextclipstart.Text), float.Parse(txttextclipstop.Text), (int)fontDialog1.Font.ToHfont(), int.Parse(txtTextX.Text), int.Parse(txtTextY.Text), Color2Uint32(colorDialog1.Color)).ToString();
+            _IsChanged = true;
+
+            UpdateTimelineDuration();
+
 
 
         }
@@ -1035,7 +1063,7 @@ namespace WindowsFormsApplication1
                 itrantrack = 2;
             else
                itrantrack = 3;
-
+            axTimelineControl1.SetPicinPicParam(int.Parse(textboxPicinPicLeft.Text), int.Parse(textboxPicinPicTop.Text), int.Parse(textboxPicinPicWidth.Text), int.Parse(textboxPicinPicHeight.Text));
             txttranclipindex.Text = axTimelineControl1.AddTransition(int.Parse(txttrantrackindex.Text), cbotranname.Text, float.Parse(txttranstart.Text), float.Parse(txttranstop.Text), txtTranParam.Text, itrantrack, irevdir).ToString();
             _IsChanged = true;
             UpdateTimelineDuration();
@@ -1177,7 +1205,9 @@ namespace WindowsFormsApplication1
                 axTimelineControl1.GetImageClip(e.trackIndex, e.clipIndex, ref strimage, ref iclipstart, ref iclipstop, ref istretchmode);
 
                 cboimagestretchmode.SelectedIndex = istretchmode;
-                txtimage.Text = strimage;
+
+                    txtimage.Text = strimage;
+
                 txtimageclipstart.Text = iclipstart.ToString();
                 txtimageclipstop.Text = iclipstop.ToString();
         
@@ -1676,8 +1706,24 @@ namespace WindowsFormsApplication1
 
         private void hScrollBarScaleTimeline_Scroll(object sender, ScrollEventArgs e)
         {
-           float scale =(float)(hScrollBarScaleTimeline.Value  * 0.01);
-            axTimelineControl1.SetScale(scale);
+            int iScrollValue = hScrollBarScaleTimeline.Value;
+
+
+            if (iScrollValue >= 10) //zoom in
+            {
+
+                float scale = (float)(iScrollValue * 0.01);
+
+                axTimelineControl1.SetScale(scale);
+            }
+            else if (iScrollValue >= 1 || iScrollValue <= 9) //zoom out
+            {
+
+                float scale = (float)(iScrollValue * 0.001);
+               
+                axTimelineControl1.SetScale(scale);
+
+            }
         }
 
         private void hScrollBarScaleOutTimeline_Scroll(object sender, ScrollEventArgs e)
@@ -1695,6 +1741,137 @@ namespace WindowsFormsApplication1
         {
             axTimelineControl1.DragOverMoveClipMode = 1;
 
+        }
+
+        private void btnzoomdefault_Click(object sender, EventArgs e)
+        {
+            hScrollBarScaleTimeline.Value = 9;
+            int iScrollValue = hScrollBarScaleTimeline.Value;
+            float scale = (float)(iScrollValue * 0.001);
+
+            axTimelineControl1.SetScale(scale);
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //axTimelineControl1.AddImageClip2(int.Parse(txtimagetrackindex.Text), txtimage.Text, 1024,768, Color2Uint32(Color.Black),30,10,320,240,float.Parse(txtimageclipstart.Text), float.Parse(txtimageclipstop.Text), cboimagestretchmode.SelectedIndex).ToString();
+            int iClipIndex;
+            if (chkuseaddimagecliptran.Checked)
+            {
+                int iImageWidth=0;
+                int iImageHeight =0;
+
+                if (chkKeepOrgSize.Checked)
+                {
+                    // set to 0x0 it mean use original size
+                    iImageWidth = 0;
+                    iImageHeight = 0;
+                }
+                else
+                {
+                    iImageWidth = int.Parse(txtimage2width.Text);
+                    iImageHeight = int.Parse(txtimage2height.Text);
+                }
+
+                iClipIndex = axTimelineControl1.AddImageClipTransparent(int.Parse(txtimagetrackindex.Text), txtimage.Text, int.Parse(txtOutputImageWidth.Text), int.Parse(txtOutputImageHeight.Text), Color2Uint32(colorDialog1.Color), int.Parse(txtimage2left.Text), int.Parse(txtimage2top.Text), iImageWidth, iImageHeight, float.Parse(txtimageclipstart.Text), float.Parse(txtimageclipstop.Text));
+
+            }
+            else
+                iClipIndex = axTimelineControl1.AddImageClip2(int.Parse(txtimagetrackindex.Text), txtimage.Text, int.Parse(txtOutputImageWidth.Text), int.Parse(txtOutputImageHeight.Text), Color2Uint32(colorDialog1.Color), int.Parse(txtimage2left.Text), int.Parse(txtimage2top.Text), int.Parse(txtimage2width.Text), int.Parse(txtimage2height.Text), float.Parse(txtimageclipstart.Text), float.Parse(txtimageclipstop.Text));
+          
+            txtimageclipindex.Text = iClipIndex.ToString();
+            _IsChanged = true;
+
+            UpdateTimelineDuration();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void chkuseaddimageclip2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkuseaddimageclip2.Checked)
+            {
+                
+                chkuseaddimagecliptran.Checked = false;
+
+                btnAddImageClip2BgColor.Enabled = true;
+                btnAddImageClip2.Enabled = true;
+                btnaddimage.Enabled = false;
+
+
+            }
+            else
+            {
+                btnAddImageClip2BgColor.Enabled = false;
+                btnAddImageClip2.Enabled = false;
+                btnaddimage.Enabled = true;
+
+            }
+
+        }
+
+        private void axTimelineControl1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddImageClip2BgColor_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+        }
+
+        private void chkuseaddimagecliptran_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkuseaddimagecliptran.Checked)
+            {
+             
+                chkuseaddimageclip2.Checked = false;
+                btnAddImageClip2BgColor.Enabled = true;
+
+                btnAddImageClip2BgColor.Text = "Transparent Color";
+
+                btnAddImageClip2.Enabled = true;
+                btnAddImageClip2.Text = "Add AddImageClipTransparent";
+                btnaddimage.Enabled = false;
+
+             
+            }
+            else
+            {
+                btnAddImageClip2.Enabled = false;
+                btnAddImageClip2.Text = "Add AddImageClip2";
+             
+                btnAddImageClip2BgColor.Enabled = false;
+
+                btnAddImageClip2BgColor.Text = "Bg Color";
+                btnaddimage.Enabled = true;
+
+            }    
+        }
+
+        private void chkKeepOrgSize_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkKeepOrgSize.Checked)
+            {
+                txtimage2width.Enabled = false;
+                txtimage2height.Enabled = false;
+               
+            }
+            else
+            {
+                txtimage2width.Enabled = true;
+                txtimage2height.Enabled = true;
+
+            }
         }
        
        

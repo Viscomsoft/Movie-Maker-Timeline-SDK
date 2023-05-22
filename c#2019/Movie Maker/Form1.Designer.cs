@@ -147,6 +147,20 @@
             this.Label13 = new System.Windows.Forms.Label();
             this.txtvideo2 = new System.Windows.Forms.TextBox();
             this.TabPage4 = new System.Windows.Forms.TabPage();
+            this.chkKeepOrgSize = new System.Windows.Forms.CheckBox();
+            this.label165 = new System.Windows.Forms.Label();
+            this.chkuseaddimagecliptran = new System.Windows.Forms.CheckBox();
+            this.chkuseaddimageclip2 = new System.Windows.Forms.CheckBox();
+            this.txtimage2height = new System.Windows.Forms.TextBox();
+            this.label169 = new System.Windows.Forms.Label();
+            this.txtimage2width = new System.Windows.Forms.TextBox();
+            this.label168 = new System.Windows.Forms.Label();
+            this.txtimage2top = new System.Windows.Forms.TextBox();
+            this.label167 = new System.Windows.Forms.Label();
+            this.txtimage2left = new System.Windows.Forms.TextBox();
+            this.label166 = new System.Windows.Forms.Label();
+            this.btnAddImageClip2BgColor = new System.Windows.Forms.Button();
+            this.btnAddImageClip2 = new System.Windows.Forms.Button();
             this.Label156 = new System.Windows.Forms.Label();
             this.cboimagestretchmode = new System.Windows.Forms.ComboBox();
             this.chkImageVisible = new System.Windows.Forms.CheckBox();
@@ -291,6 +305,15 @@
             this.txteffecttrackindex = new System.Windows.Forms.TextBox();
             this.Label41 = new System.Windows.Forms.Label();
             this.TabPage9 = new System.Windows.Forms.TabPage();
+            this.textboxPicinPicHeight = new System.Windows.Forms.TextBox();
+            this.label164 = new System.Windows.Forms.Label();
+            this.textboxPicinPicWidth = new System.Windows.Forms.TextBox();
+            this.label163 = new System.Windows.Forms.Label();
+            this.textboxPicinPicTop = new System.Windows.Forms.TextBox();
+            this.label162 = new System.Windows.Forms.Label();
+            this.textboxPicinPicLeft = new System.Windows.Forms.TextBox();
+            this.label161 = new System.Windows.Forms.Label();
+            this.label160 = new System.Windows.Forms.Label();
             this.chkTransitionVisible = new System.Windows.Forms.CheckBox();
             this.btnremovetran = new System.Windows.Forms.Button();
             this.btnchangetran = new System.Windows.Forms.Button();
@@ -435,8 +458,13 @@
             this.hScrollBarScaleTimeline = new System.Windows.Forms.HScrollBar();
             this.label159 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioDragOverToRight = new System.Windows.Forms.RadioButton();
             this.radioDragOverToLeft = new System.Windows.Forms.RadioButton();
+            this.radioDragOverToRight = new System.Windows.Forms.RadioButton();
+            this.btnzoomdefault = new System.Windows.Forms.Button();
+            this.label170 = new System.Windows.Forms.Label();
+            this.txtOutputImageWidth = new System.Windows.Forms.TextBox();
+            this.label171 = new System.Windows.Forms.Label();
+            this.txtOutputImageHeight = new System.Windows.Forms.TextBox();
             this.TabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -1662,6 +1690,24 @@
             // 
             // TabPage4
             // 
+            this.TabPage4.Controls.Add(this.txtOutputImageHeight);
+            this.TabPage4.Controls.Add(this.label171);
+            this.TabPage4.Controls.Add(this.txtOutputImageWidth);
+            this.TabPage4.Controls.Add(this.label170);
+            this.TabPage4.Controls.Add(this.chkKeepOrgSize);
+            this.TabPage4.Controls.Add(this.label165);
+            this.TabPage4.Controls.Add(this.chkuseaddimagecliptran);
+            this.TabPage4.Controls.Add(this.chkuseaddimageclip2);
+            this.TabPage4.Controls.Add(this.txtimage2height);
+            this.TabPage4.Controls.Add(this.label169);
+            this.TabPage4.Controls.Add(this.txtimage2width);
+            this.TabPage4.Controls.Add(this.label168);
+            this.TabPage4.Controls.Add(this.txtimage2top);
+            this.TabPage4.Controls.Add(this.label167);
+            this.TabPage4.Controls.Add(this.txtimage2left);
+            this.TabPage4.Controls.Add(this.label166);
+            this.TabPage4.Controls.Add(this.btnAddImageClip2BgColor);
+            this.TabPage4.Controls.Add(this.btnAddImageClip2);
             this.TabPage4.Controls.Add(this.Label156);
             this.TabPage4.Controls.Add(this.cboimagestretchmode);
             this.TabPage4.Controls.Add(this.chkImageVisible);
@@ -1685,6 +1731,143 @@
             this.TabPage4.TabIndex = 3;
             this.TabPage4.Text = "Image";
             this.TabPage4.UseVisualStyleBackColor = true;
+            this.TabPage4.Click += new System.EventHandler(this.TabPage4_Click);
+            // 
+            // chkKeepOrgSize
+            // 
+            this.chkKeepOrgSize.AutoSize = true;
+            this.chkKeepOrgSize.Checked = true;
+            this.chkKeepOrgSize.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkKeepOrgSize.Location = new System.Drawing.Point(657, 131);
+            this.chkKeepOrgSize.Name = "chkKeepOrgSize";
+            this.chkKeepOrgSize.Size = new System.Drawing.Size(132, 16);
+            this.chkKeepOrgSize.TabIndex = 69;
+            this.chkKeepOrgSize.Text = "Keep Original Size";
+            this.chkKeepOrgSize.UseVisualStyleBackColor = true;
+            this.chkKeepOrgSize.CheckedChanged += new System.EventHandler(this.chkKeepOrgSize_CheckedChanged);
+            // 
+            // label165
+            // 
+            this.label165.AutoSize = true;
+            this.label165.Location = new System.Drawing.Point(607, 3);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(197, 12);
+            this.label165.TabIndex = 68;
+            this.label165.Text = "For Pic in Pic (Image and Video)";
+            // 
+            // chkuseaddimagecliptran
+            // 
+            this.chkuseaddimagecliptran.AutoSize = true;
+            this.chkuseaddimagecliptran.Location = new System.Drawing.Point(622, 24);
+            this.chkuseaddimagecliptran.Name = "chkuseaddimagecliptran";
+            this.chkuseaddimagecliptran.Size = new System.Drawing.Size(186, 16);
+            this.chkuseaddimagecliptran.TabIndex = 67;
+            this.chkuseaddimagecliptran.Text = "Use AddImageClipTransparent";
+            this.chkuseaddimagecliptran.UseVisualStyleBackColor = true;
+            this.chkuseaddimagecliptran.CheckedChanged += new System.EventHandler(this.chkuseaddimagecliptran_CheckedChanged);
+            // 
+            // chkuseaddimageclip2
+            // 
+            this.chkuseaddimageclip2.AutoSize = true;
+            this.chkuseaddimageclip2.Location = new System.Drawing.Point(488, 24);
+            this.chkuseaddimageclip2.Name = "chkuseaddimageclip2";
+            this.chkuseaddimageclip2.Size = new System.Drawing.Size(126, 16);
+            this.chkuseaddimageclip2.TabIndex = 66;
+            this.chkuseaddimageclip2.Text = "Use AddImageClip2";
+            this.chkuseaddimageclip2.UseVisualStyleBackColor = true;
+            this.chkuseaddimageclip2.CheckedChanged += new System.EventHandler(this.chkuseaddimageclip2_CheckedChanged);
+            // 
+            // txtimage2height
+            // 
+            this.txtimage2height.Enabled = false;
+            this.txtimage2height.Location = new System.Drawing.Point(767, 104);
+            this.txtimage2height.Name = "txtimage2height";
+            this.txtimage2height.Size = new System.Drawing.Size(30, 21);
+            this.txtimage2height.TabIndex = 65;
+            this.txtimage2height.Text = "240";
+            // 
+            // label169
+            // 
+            this.label169.AutoSize = true;
+            this.label169.Location = new System.Drawing.Point(729, 103);
+            this.label169.Name = "label169";
+            this.label169.Size = new System.Drawing.Size(41, 12);
+            this.label169.TabIndex = 64;
+            this.label169.Text = "Height";
+            // 
+            // txtimage2width
+            // 
+            this.txtimage2width.Enabled = false;
+            this.txtimage2width.Location = new System.Drawing.Point(689, 104);
+            this.txtimage2width.Name = "txtimage2width";
+            this.txtimage2width.Size = new System.Drawing.Size(34, 21);
+            this.txtimage2width.TabIndex = 63;
+            this.txtimage2width.Text = "320";
+            // 
+            // label168
+            // 
+            this.label168.AutoSize = true;
+            this.label168.Location = new System.Drawing.Point(648, 107);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(35, 12);
+            this.label168.TabIndex = 62;
+            this.label168.Text = "Width";
+            // 
+            // txtimage2top
+            // 
+            this.txtimage2top.Location = new System.Drawing.Point(767, 78);
+            this.txtimage2top.Name = "txtimage2top";
+            this.txtimage2top.Size = new System.Drawing.Size(30, 21);
+            this.txtimage2top.TabIndex = 61;
+            this.txtimage2top.Text = "0";
+            // 
+            // label167
+            // 
+            this.label167.AutoSize = true;
+            this.label167.Location = new System.Drawing.Point(729, 78);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(23, 12);
+            this.label167.TabIndex = 60;
+            this.label167.Text = "Top";
+            // 
+            // txtimage2left
+            // 
+            this.txtimage2left.Location = new System.Drawing.Point(689, 81);
+            this.txtimage2left.Name = "txtimage2left";
+            this.txtimage2left.Size = new System.Drawing.Size(34, 21);
+            this.txtimage2left.TabIndex = 59;
+            this.txtimage2left.Text = "0";
+            // 
+            // label166
+            // 
+            this.label166.AutoSize = true;
+            this.label166.Location = new System.Drawing.Point(648, 81);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(29, 12);
+            this.label166.TabIndex = 58;
+            this.label166.Text = "Left";
+            // 
+            // btnAddImageClip2BgColor
+            // 
+            this.btnAddImageClip2BgColor.Enabled = false;
+            this.btnAddImageClip2BgColor.Location = new System.Drawing.Point(498, 49);
+            this.btnAddImageClip2BgColor.Name = "btnAddImageClip2BgColor";
+            this.btnAddImageClip2BgColor.Size = new System.Drawing.Size(156, 29);
+            this.btnAddImageClip2BgColor.TabIndex = 56;
+            this.btnAddImageClip2BgColor.Text = "Bg Color";
+            this.btnAddImageClip2BgColor.UseVisualStyleBackColor = true;
+            this.btnAddImageClip2BgColor.Click += new System.EventHandler(this.btnAddImageClip2BgColor_Click);
+            // 
+            // btnAddImageClip2
+            // 
+            this.btnAddImageClip2.Enabled = false;
+            this.btnAddImageClip2.Location = new System.Drawing.Point(495, 157);
+            this.btnAddImageClip2.Name = "btnAddImageClip2";
+            this.btnAddImageClip2.Size = new System.Drawing.Size(204, 25);
+            this.btnAddImageClip2.TabIndex = 55;
+            this.btnAddImageClip2.Text = "Add AddImageClip2";
+            this.btnAddImageClip2.UseVisualStyleBackColor = true;
+            this.btnAddImageClip2.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Label156
             // 
@@ -1720,7 +1903,7 @@
             // 
             // btnremoveimage
             // 
-            this.btnremoveimage.Location = new System.Drawing.Point(418, 148);
+            this.btnremoveimage.Location = new System.Drawing.Point(401, 157);
             this.btnremoveimage.Name = "btnremoveimage";
             this.btnremoveimage.Size = new System.Drawing.Size(71, 25);
             this.btnremoveimage.TabIndex = 49;
@@ -1730,7 +1913,7 @@
             // 
             // btnchangeimage
             // 
-            this.btnchangeimage.Location = new System.Drawing.Point(358, 148);
+            this.btnchangeimage.Location = new System.Drawing.Point(341, 157);
             this.btnchangeimage.Name = "btnchangeimage";
             this.btnchangeimage.Size = new System.Drawing.Size(54, 25);
             this.btnchangeimage.TabIndex = 48;
@@ -1740,7 +1923,7 @@
             // 
             // btnaddimage
             // 
-            this.btnaddimage.Location = new System.Drawing.Point(298, 148);
+            this.btnaddimage.Location = new System.Drawing.Point(281, 157);
             this.btnaddimage.Name = "btnaddimage";
             this.btnaddimage.Size = new System.Drawing.Size(54, 25);
             this.btnaddimage.TabIndex = 47;
@@ -3100,6 +3283,15 @@
             // 
             // TabPage9
             // 
+            this.TabPage9.Controls.Add(this.textboxPicinPicHeight);
+            this.TabPage9.Controls.Add(this.label164);
+            this.TabPage9.Controls.Add(this.textboxPicinPicWidth);
+            this.TabPage9.Controls.Add(this.label163);
+            this.TabPage9.Controls.Add(this.textboxPicinPicTop);
+            this.TabPage9.Controls.Add(this.label162);
+            this.TabPage9.Controls.Add(this.textboxPicinPicLeft);
+            this.TabPage9.Controls.Add(this.label161);
+            this.TabPage9.Controls.Add(this.label160);
             this.TabPage9.Controls.Add(this.chkTransitionVisible);
             this.TabPage9.Controls.Add(this.btnremovetran);
             this.TabPage9.Controls.Add(this.btnchangetran);
@@ -3125,6 +3317,83 @@
             this.TabPage9.TabIndex = 8;
             this.TabPage9.Text = "Transitions";
             this.TabPage9.UseVisualStyleBackColor = true;
+            // 
+            // textboxPicinPicHeight
+            // 
+            this.textboxPicinPicHeight.Location = new System.Drawing.Point(672, 29);
+            this.textboxPicinPicHeight.Name = "textboxPicinPicHeight";
+            this.textboxPicinPicHeight.Size = new System.Drawing.Size(43, 21);
+            this.textboxPicinPicHeight.TabIndex = 96;
+            this.textboxPicinPicHeight.Text = "240";
+            // 
+            // label164
+            // 
+            this.label164.AutoSize = true;
+            this.label164.Location = new System.Drawing.Point(616, 32);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(41, 12);
+            this.label164.TabIndex = 95;
+            this.label164.Text = "Height";
+            // 
+            // textboxPicinPicWidth
+            // 
+            this.textboxPicinPicWidth.Location = new System.Drawing.Point(551, 32);
+            this.textboxPicinPicWidth.Name = "textboxPicinPicWidth";
+            this.textboxPicinPicWidth.Size = new System.Drawing.Size(48, 21);
+            this.textboxPicinPicWidth.TabIndex = 94;
+            this.textboxPicinPicWidth.Text = "320";
+            // 
+            // label163
+            // 
+            this.label163.AutoSize = true;
+            this.label163.Location = new System.Drawing.Point(510, 30);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(35, 12);
+            this.label163.TabIndex = 93;
+            this.label163.Text = "Width";
+            // 
+            // textboxPicinPicTop
+            // 
+            this.textboxPicinPicTop.Location = new System.Drawing.Point(445, 32);
+            this.textboxPicinPicTop.Name = "textboxPicinPicTop";
+            this.textboxPicinPicTop.Size = new System.Drawing.Size(52, 21);
+            this.textboxPicinPicTop.TabIndex = 92;
+            this.textboxPicinPicTop.Text = "0";
+            // 
+            // label162
+            // 
+            this.label162.AutoSize = true;
+            this.label162.Location = new System.Drawing.Point(416, 31);
+            this.label162.Name = "label162";
+            this.label162.Size = new System.Drawing.Size(23, 12);
+            this.label162.TabIndex = 91;
+            this.label162.Text = "Top";
+            // 
+            // textboxPicinPicLeft
+            // 
+            this.textboxPicinPicLeft.Location = new System.Drawing.Point(354, 31);
+            this.textboxPicinPicLeft.Name = "textboxPicinPicLeft";
+            this.textboxPicinPicLeft.Size = new System.Drawing.Size(52, 21);
+            this.textboxPicinPicLeft.TabIndex = 90;
+            this.textboxPicinPicLeft.Text = "0";
+            // 
+            // label161
+            // 
+            this.label161.AutoSize = true;
+            this.label161.Location = new System.Drawing.Point(319, 32);
+            this.label161.Name = "label161";
+            this.label161.Size = new System.Drawing.Size(29, 12);
+            this.label161.TabIndex = 89;
+            this.label161.Text = "Left";
+            // 
+            // label160
+            // 
+            this.label160.AutoSize = true;
+            this.label160.Location = new System.Drawing.Point(315, 13);
+            this.label160.Name = "label160";
+            this.label160.Size = new System.Drawing.Size(101, 12);
+            this.label160.TabIndex = 88;
+            this.label160.Text = "Pic in Pic Param";
             // 
             // chkTransitionVisible
             // 
@@ -4397,6 +4666,7 @@
             this.axTimelineControl1.OnPlaying += new AxTimelineAxLib._ITimelineControlEvents_OnPlayingEventHandler(this.axTimelineControl1_OnPlaying);
             this.axTimelineControl1.OnConvertProgress += new AxTimelineAxLib._ITimelineControlEvents_OnConvertProgressEventHandler(this.axTimelineControl1_OnConvertProgress);
             this.axTimelineControl1.OnConvertCompleted += new System.EventHandler(this.axTimelineControl1_OnConvertCompleted);
+            this.axTimelineControl1.Enter += new System.EventHandler(this.axTimelineControl1_Enter);
             // 
             // label150
             // 
@@ -4505,18 +4775,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Drag Clip Over Another Clip Mode";
             // 
-            // radioDragOverToRight
-            // 
-            this.radioDragOverToRight.AutoSize = true;
-            this.radioDragOverToRight.Location = new System.Drawing.Point(10, 15);
-            this.radioDragOverToRight.Name = "radioDragOverToRight";
-            this.radioDragOverToRight.Size = new System.Drawing.Size(131, 16);
-            this.radioDragOverToRight.TabIndex = 57;
-            this.radioDragOverToRight.TabStop = true;
-            this.radioDragOverToRight.Text = "Move Clip to Right";
-            this.radioDragOverToRight.UseVisualStyleBackColor = true;
-            this.radioDragOverToRight.CheckedChanged += new System.EventHandler(this.radioDragOverToRight_CheckedChanged);
-            // 
             // radioDragOverToLeft
             // 
             this.radioDragOverToLeft.AutoSize = true;
@@ -4529,11 +4787,68 @@
             this.radioDragOverToLeft.UseVisualStyleBackColor = true;
             this.radioDragOverToLeft.CheckedChanged += new System.EventHandler(this.radioDragOverToLeft_CheckedChanged);
             // 
+            // radioDragOverToRight
+            // 
+            this.radioDragOverToRight.AutoSize = true;
+            this.radioDragOverToRight.Location = new System.Drawing.Point(10, 15);
+            this.radioDragOverToRight.Name = "radioDragOverToRight";
+            this.radioDragOverToRight.Size = new System.Drawing.Size(131, 16);
+            this.radioDragOverToRight.TabIndex = 57;
+            this.radioDragOverToRight.TabStop = true;
+            this.radioDragOverToRight.Text = "Move Clip to Right";
+            this.radioDragOverToRight.UseVisualStyleBackColor = true;
+            this.radioDragOverToRight.CheckedChanged += new System.EventHandler(this.radioDragOverToRight_CheckedChanged);
+            // 
+            // btnzoomdefault
+            // 
+            this.btnzoomdefault.Location = new System.Drawing.Point(423, 563);
+            this.btnzoomdefault.Name = "btnzoomdefault";
+            this.btnzoomdefault.Size = new System.Drawing.Size(65, 28);
+            this.btnzoomdefault.TabIndex = 57;
+            this.btnzoomdefault.Text = "Default";
+            this.btnzoomdefault.UseVisualStyleBackColor = true;
+            this.btnzoomdefault.Click += new System.EventHandler(this.btnzoomdefault_Click);
+            // 
+            // label170
+            // 
+            this.label170.AutoSize = true;
+            this.label170.Location = new System.Drawing.Point(493, 84);
+            this.label170.Name = "label170";
+            this.label170.Size = new System.Drawing.Size(143, 12);
+            this.label170.TabIndex = 70;
+            this.label170.Text = "Output image resolution";
+            // 
+            // txtOutputImageWidth
+            // 
+            this.txtOutputImageWidth.Location = new System.Drawing.Point(496, 105);
+            this.txtOutputImageWidth.Name = "txtOutputImageWidth";
+            this.txtOutputImageWidth.Size = new System.Drawing.Size(37, 21);
+            this.txtOutputImageWidth.TabIndex = 71;
+            this.txtOutputImageWidth.Text = "320";
+            // 
+            // label171
+            // 
+            this.label171.AutoSize = true;
+            this.label171.Location = new System.Drawing.Point(544, 107);
+            this.label171.Name = "label171";
+            this.label171.Size = new System.Drawing.Size(11, 12);
+            this.label171.TabIndex = 72;
+            this.label171.Text = "X";
+            // 
+            // txtOutputImageHeight
+            // 
+            this.txtOutputImageHeight.Location = new System.Drawing.Point(569, 105);
+            this.txtOutputImageHeight.Name = "txtOutputImageHeight";
+            this.txtOutputImageHeight.Size = new System.Drawing.Size(37, 21);
+            this.txtOutputImageHeight.TabIndex = 73;
+            this.txtOutputImageHeight.Text = "240";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1276, 781);
+            this.ClientSize = new System.Drawing.Size(1276, 682);
+            this.Controls.Add(this.btnzoomdefault);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label159);
             this.Controls.Add(this.hScrollBarScaleTimeline);
@@ -5027,6 +5342,34 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioDragOverToLeft;
         private System.Windows.Forms.RadioButton radioDragOverToRight;
+        private System.Windows.Forms.Button btnzoomdefault;
+        private System.Windows.Forms.Button btnAddImageClip2;
+        private System.Windows.Forms.TextBox textboxPicinPicHeight;
+        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.TextBox textboxPicinPicWidth;
+        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.TextBox textboxPicinPicTop;
+        private System.Windows.Forms.Label label162;
+        private System.Windows.Forms.TextBox textboxPicinPicLeft;
+        private System.Windows.Forms.Label label161;
+        private System.Windows.Forms.Label label160;
+        private System.Windows.Forms.Button btnAddImageClip2BgColor;
+        private System.Windows.Forms.TextBox txtimage2left;
+        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.TextBox txtimage2top;
+        private System.Windows.Forms.Label label167;
+        private System.Windows.Forms.TextBox txtimage2height;
+        private System.Windows.Forms.Label label169;
+        private System.Windows.Forms.TextBox txtimage2width;
+        private System.Windows.Forms.Label label168;
+        private System.Windows.Forms.CheckBox chkuseaddimageclip2;
+        private System.Windows.Forms.CheckBox chkuseaddimagecliptran;
+        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.CheckBox chkKeepOrgSize;
+        private System.Windows.Forms.TextBox txtOutputImageHeight;
+        private System.Windows.Forms.Label label171;
+        private System.Windows.Forms.TextBox txtOutputImageWidth;
+        private System.Windows.Forms.Label label170;
     }
 }
 
